@@ -57,17 +57,17 @@ mean_3rd_row = statistics.mean(data_3rd_row)
 median_3rd_row = statistics.median(data_3rd_row)
 
 # Print the results for each row
-print('Results for 1st Row:')
+print('Results for Age:')
 print(f'Average: {average_1st_row}')
 print(f'Mean: {mean_1st_row}')
 print(f'Median: {median_1st_row}')
 
-print('\nResults for 2nd Row:')
+print('\nResults for Weight:')
 print(f'Average: {average_2nd_row}')
 print(f'Mean: {mean_2nd_row}')
 print(f'Median: {median_2nd_row}')
 
-print('\nResults for 3rd Row:')
+print('\nResults for Height:')
 print(f'Average: {average_3rd_row}')
 print(f'Mean: {mean_3rd_row}')
 print(f'Median: {median_3rd_row}')
