@@ -1,0 +1,73 @@
+import csv
+import statistics
+
+# Initialize variables for calculations
+total_values_1st_row = 0
+sum_values_1st_row = 0
+data_1st_row = []
+
+total_values_2nd_row = 0
+sum_values_2nd_row = 0
+data_2nd_row = []
+
+total_values_3rd_row = 0
+sum_values_3rd_row = 0
+data_3rd_row = []
+
+# Read the CSV file row by row
+with open('stats_file.csv', 'r') as file:
+    csv_reader = csv.reader(file)
+
+    # Skip the header row
+    header = next(csv_reader, None)
+
+    # Iterate over the rows
+    for row in csv_reader:
+        # Assuming the values you want to calculate are in the 1st, 2nd, and 3rd columns
+        value_1st_row = float(row[0])
+        value_2nd_row = float(row[1])
+        value_3rd_row = float(row[2])
+
+        # 1st Row calculations
+        data_1st_row.append(value_1st_row)
+        total_values_1st_row += 1
+        sum_values_1st_row += value_1st_row
+
+        # 2nd Row calculations
+        data_2nd_row.append(value_2nd_row)
+        total_values_2nd_row += 1
+        sum_values_2nd_row += value_2nd_row
+
+        # 3rd Row calculations
+        data_3rd_row.append(value_3rd_row)
+        total_values_3rd_row += 1
+        sum_values_3rd_row += value_3rd_row
+
+# Calculate average, mean, and median for each row
+average_1st_row = sum_values_1st_row / total_values_1st_row
+mean_1st_row = statistics.mean(data_1st_row)
+median_1st_row = statistics.median(data_1st_row)
+
+average_2nd_row = sum_values_2nd_row / total_values_2nd_row
+mean_2nd_row = statistics.mean(data_2nd_row)
+median_2nd_row = statistics.median(data_2nd_row)
+
+average_3rd_row = sum_values_3rd_row / total_values_3rd_row
+mean_3rd_row = statistics.mean(data_3rd_row)
+median_3rd_row = statistics.median(data_3rd_row)
+
+# Print the results for each row
+print('Results for 1st Row:')
+print(f'Average: {average_1st_row}')
+print(f'Mean: {mean_1st_row}')
+print(f'Median: {median_1st_row}')
+
+print('\nResults for 2nd Row:')
+print(f'Average: {average_2nd_row}')
+print(f'Mean: {mean_2nd_row}')
+print(f'Median: {median_2nd_row}')
+
+print('\nResults for 3rd Row:')
+print(f'Average: {average_3rd_row}')
+print(f'Mean: {mean_3rd_row}')
+print(f'Median: {median_3rd_row}')
