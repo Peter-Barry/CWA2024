@@ -20,7 +20,7 @@ students[1] = input("enter how many students had the second symptom ")
 symptoms[2] = input("enter a third symptom ")
 students[2] = input("enter how many students had the third symptom ")
 # Data to plot
-labels = symptoms[0], 'symptoms 1', 'symptoms 2'
+labels = symptoms[0], symptoms[1], symptoms[2]
 sizes = [students[0], students[1], students[2]]
 colors = ['gold', 'yellowgreen', 'lightcoral']
 explode = (0.1, 0.1, 0.1)  # explode 1st slice
