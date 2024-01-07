@@ -1,0 +1,17 @@
+Day,Outlook,Temp,Humidity,Wind,Play
+1,Sunny,Hot,High,weak,no
+2,Overcast,Hot,High,strong,no
+3,Overcast,Hot,High,weak,yes
+4,Rain,Mild,High,weak,yes
+5,Rain,Cool,Normal,weak,yes
+6,Rain,Cool,Normal,strong,no
+7,Overcast,Cool,Normal,weak,yes
+8,Overcast,Mild,High,weak,no
+9,Overcast,Cool,Normal,weak,yes
+10,Rain,Mild,Normal,weak,yes
+11,Sunny,Mild,Normal,strong ,yes
+12,Overcast,Mild,High,strong,yes
+13,Overcast,Hot,Normal,weak ,yes
+14,Rain,Mild,High,strong,no
+ , , , ,,
+ , , , ,,
