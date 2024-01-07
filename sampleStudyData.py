@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error
 # Training the model
 
 # Load your dataset
-data = pd.read_csv('your_dataset_copy.csv')
+data = pd.read_csv('CWA_your_dataset_copy2.csv')
 # Define your independent variables (features) and dependent variable (target)
 X = data[['Hours_study', 'Hours_sleep', 'Hours_exercise']]
 Y = data['Mood_Score']

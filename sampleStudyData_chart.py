@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Assuming your data is in a CSV file named 'mood_data.csv'
-file_path = 'your_dataset_copy2.csv'
+file_path = 'CWA_your_dataset_copy2.csv'
 df = pd.read_csv(file_path)
 print(df.columns)
 
