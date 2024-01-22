@@ -1,6 +1,13 @@
 
 import serial
 from time import sleep
+from statistics import mean
+
+def remove_alpha(input_str):
+    # Create a new string containing only digits
+    result_str = ''.join(char for char in input_str if char.isdigit())
+    return result_str
+
 # blank list for light data
 lightList = []
 ser = serial.Serial()
@@ -10,31 +17,33 @@ ser.port = "COM3"
 
 ser.open()
 
-
-# In fact... keep trying it! Again and again! MOAR!
-for x in range(5):
-        
+# Start the loop to read serial data! Change the number up from 4 to whatever you want
+for x in range(4):
         # First take in all the data and assign it to this variable
         microbitdata = str(ser.readline())
-        
         # Get second bit onwards, call that signal_in
         light_data = microbitdata[2:]
-        
+
         # Remove any spaces, data validation!
         light_data = light_data.replace(" ","")
-        
+
         # Remove any apostrophies, data validation!
         light_data = light_data.replace("'","")
-        
+
         # Replace this with nothing (remove it), data validation!
         light_data = light_data.replace("\\r\\n","")
+        #remove alphas
+        light_data = remove_alpha(light_data)
+        print("removed alphas", light_data)
+        
+        #Validation checking to ensure the data is integer and changing to float
         light_data = float(light_data)
         
         # Print it to see if any of that rubbish above actually worked
-        print(light_data)
+        #print(type(light_data))
         #VALIDATION
         #add data to list! But only if its a float, so null types which are common on Microbits will never get added to the data
-        if type(light_data_== float:
+        if type(light_data) == float:
             lightList.append(light_data)
 
 print("LightData = ", lightList)
