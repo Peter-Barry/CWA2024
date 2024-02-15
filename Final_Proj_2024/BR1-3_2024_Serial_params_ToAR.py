@@ -30,8 +30,6 @@ avg_mood = round(mean([intellectual_wellness,physical_wellness,social_wellness])
 mood_remark = interpret_mood(avg_mood)
 print("My Average mood today is ",mood_remark, " ", avg_mood)
 
-
-
 # TAKE IN LIGHT DATA FROM MICROBIT PROCESS REQUIRING THEM MICROBIT TO BE RUNNING
 # blank list for light data
 lightList = []
@@ -74,8 +72,6 @@ maxLight = round(max(lightList),2)
 minLight = round(min(lightList),2)
 meanLight = round(mean(lightList),2)
 print("Max Light List is ",maxLight,"Min Light List is ",minLight,"Mean Light List is ",meanLight)
-
-
 
 #write the combined avg light data and average mood to a CSV file
 f = open("BR1-3_results.csv", "a", newline='')
