@@ -14,7 +14,6 @@
 # predicted_X_Value = predict_mood(A,B,C)
 # print("The predicted value is", predicted_X_Value)
 
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -45,11 +44,7 @@ Y_pred = model.predict(X_test)
 
 print("Multiple Linear Regression Model Complete!")
 
-
-
-
 # Checking how well it worked
-
 mse = mean_squared_error(Y_test, Y_pred)
 print(f"Mean Squared Error: {mse}")
 
@@ -69,8 +64,6 @@ def interpret_mse(mse):
 
 mse_remark = interpret_mse(mse)
 print("How good is this model? ", mse_remark)
-
-
 
 # Making a prediction using the model
 
