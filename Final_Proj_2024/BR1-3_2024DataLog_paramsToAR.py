@@ -33,6 +33,13 @@ light_min = df['Light'].min()
 light_max = df['Light'].max()
 light_mean = df['Light'].mean()
 print (light_min,light_max,light_mean, avg_mood)
+#DATA VALIDATION BR2, validating and if necessary modifying the VARIABLE data before writing the Data to output file
+if not isinstance(light_min, float):
+    light_min = float(light_min)
+if not isinstance(light_mean, float):
+    light_mean = float(light_mean)
+if not isinstance(light_max, float):
+    light_max = float(light_max)
 
 #write the combined avg light data and average mood to a CSV file
 f = open("BR1-3_results.csv", "a", newline='')
