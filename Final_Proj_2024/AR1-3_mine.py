@@ -67,7 +67,7 @@ sunlight_hours = 2
 average_sunlight = 100
 peak = 200
 
-mood_if_littleSun = predict_mood(sunlight_hours, average_sunlight, peak)  # Example values
+mood_if_lowSun = predict_mood(sunlight_hours, average_sunlight, peak)  # Example values
 print("\n The low sun score mood is", mood_if_lowSun)
 
 # WHAT-IF Q2
@@ -82,7 +82,7 @@ average_sunlight = 600
 peak = 800
 
 mood_if_HighSun = predict_mood(sunlight_hours, average_sunlight, peak)  # Example values
-print("\n The higher sun score mood is", mood_if_LoadsaSun)
+print("\n The higher sun score mood is", mood_if_HighSun)
 
 # WHAT IF Q3
 # # What is will your mood be with middle/normal values given to the 3 params?
@@ -106,7 +106,7 @@ print("")
 #using the system or the results of a ‘what if’ scenario.
 
 # Data: names of the variables and their values for the chart
-variable_names = ['Mood if lowSun', 'Mood if normal sun','Mood if Loads Sun']
+variable_names = ['Mood if lowSun', 'Mood if NormalSun','Mood if HighSun']
 values = [mood_if_lowSun, mood_if_NormalSun,mood_if_HighSun]
 
 # Creating the bar chart
