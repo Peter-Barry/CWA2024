@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 def predict_mood(hours_of_sunlight, sunlight_intensity, peak_sunlight_intensity):
     df = pd.DataFrame([[hours_of_sunlight, sunlight_intensity, peak_sunlight_intensity]],
                       columns=['Hours_light', 'Intensity_Light', 'Peak_Light'])
-    return model.predict(df)[0]
+    return my_model.predict(df)[0]
 
 # Training the model
 # first Load your dataset
