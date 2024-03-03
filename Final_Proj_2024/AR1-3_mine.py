@@ -49,9 +49,9 @@ print("My Multiple Linear Regression Model is now Complete!")
 # Note 2 different datatypes
 print("")
 print("USER CHOOSES 3 LIGHT LEVELS MODE")
-hours = int(input("Enter sunlight hours. Can be any integer from 0-24"))
+hours = int(input("Enter sunlight hours. Can be any integer from 0-24 "))
 sun = float(input("Enter average sunlight intensity. Can be anything from 1-800 "))
-peak = float(input("Enter peak sunlight level. Can be anything from 1-800"))
+peak = float(input("Enter peak sunlight level. Can be anything from 1-800 "))
 
 predicted_mood = predict_mood(hours, sun, peak)  # Example values
 print("\n The Predicted Mood Score for the values entered is", predicted_mood)
