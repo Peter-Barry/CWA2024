@@ -33,13 +33,13 @@ Y = data['Mood_Score']
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
 
 # Creating the Linear Regression model
-model = LinearRegression()
+my_model = LinearRegression()
 
 # Fitting the model with the training data
-model.fit(X_train, Y_train)
+my_model.fit(X_train, Y_train)
 
 # Predicting mood scores for the test set
-Y_pred = model.predict(X_test)
+Y_pred = my_model.predict(X_test)
 
 
 print("My Multiple Linear Regression Model is now Complete!")
@@ -56,6 +56,7 @@ peak = float(input("Enter peak sunlight level. Can be anything from 1-800"))
 predicted_mood = predict_mood(hours, sun, peak)  # Example values
 print("\n The Predicted Mood Score for the values entered is", predicted_mood)
 
+#___________________What If Questions AR2 _________
 # WHAT-IF Q1
 # What is will your mood be with low values given to the 3 params?
 print("-----------------------------------------------------------")
@@ -90,7 +91,6 @@ print("-----------------------------------------------------------")
 print("WHAT-IF QUESTION 3")
 print("Let's test mood if medium sunlight")
 
-
 # middlin values for all 3 parameters 
 hours_sunlight = 6
 average_sunlight = 300
@@ -100,7 +100,7 @@ mood_if_NormalSun = predict_mood(hours_of_sunlight, average_sunlight, peak_sunli
 print("\n The middle sunlight Score mood is", mood_if_NormalSun)
 print("")
 
-# Data: names of the variables and their values
+# Data: names of the variables and their values for the Bar Chart    AR3
 #------------------------------------
 # AR3 Users can view data in a graphical format which displays information such as their progress
 #using the system or the results of a ‘what if’ scenario.
