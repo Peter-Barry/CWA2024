@@ -63,11 +63,11 @@ print("WHAT-IF QUESTION 1")
 print("Let's test what the mood will be if the sunlight is very low")
 
 # Low values for all 3 parameters
-sunlight_hours = 2
+hours_of_sunlight = 2
 average_sunlight = 100
-peak = 200
+peak_sunlight = 200
 
-mood_if_lowSun = predict_mood(sunlight_hours, average_sunlight, peak)  # Example values
+mood_if_lowSun = predict_mood(hours_of_sunlight, average_sunlight, peak_sunlight)  # Example values
 print("\n The low sun score mood is", mood_if_lowSun)
 
 # WHAT-IF Q2
@@ -77,11 +77,11 @@ print("WHAT-IF QUESTION 2")
 print("Let's test what the mood will be if the sunlight is very high")
 
 # High values for all 3 parameters
-sunlight_hours = 15
+hours_of_sunlight = 15
 average_sunlight = 600
-peak = 800
+peak_sunlight = 800
 
-mood_if_HighSun = predict_mood(sunlight_hours, average_sunlight, peak)  # Example values
+mood_if_HighSun = predict_mood(hours_of_sunlight, average_sunlight, peak_sunlight)  # Example values
 print("\n The higher sun score mood is", mood_if_HighSun)
 
 # WHAT IF Q3
@@ -92,11 +92,11 @@ print("Let's test mood if medium sunlight")
 
 
 # middlin values for all 3 parameters 
-sunlight_hours = 6
+hours_sunlight = 6
 average_sunlight = 300
-peak = 300
+peak_sunlight = 300
 
-mood_if_NormalSun = predict_mood(sunlight_hours, average_sunlight, peak) 
+mood_if_NormalSun = predict_mood(hours_of_sunlight, average_sunlight, peak_sunlight) 
 print("\n The middle sunlight Score mood is", mood_if_NormalSun)
 print("")
 
