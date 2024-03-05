@@ -60,7 +60,7 @@ print("USER CHOOSES 3 LIGHT LEVELS MODE")
 #peak = float(input("Enter peak sunlight level. Can be anything from 1-800 "))
 hours, sun, peak = get_user_input()
 predicted_mood = predict_mood(hours, sun, peak)  # Example values
-print("\n The Predicted Mood Score for the values entered is", predicted_mood)
+print("\n The Predicted Mood Score for the values entered on screen is", predicted_mood)
 
 #___________________What If Questions AR2 _________
 # WHAT-IF Q1

@@ -1,3 +1,14 @@
+# This program takes three values from a CSV file and compares them to predict a fourth value
+# This program then attempts to execute a "Multiple Linear Regression" AR1
+# using 3 independent variables and one dependent variable.       AR1
+# The program uses input parameters from the user to make a prediction   AR1
+# The program the considers a number of WHAT-IF scenarios using the "trained" model AR2
+# to make further predictions
+# The program then produces the outcomes from above in a graphical format   AR3
+# My program is processing a dataset that originates from an embedded system which senses light
+# and uses that data along with user input to test/train a model which predicts mood
+# Some Standards: All functions will be at the top of the code, All import statements will be at the top of the code
+
 #Import Statements
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -15,7 +26,6 @@ def predict_mood(hours_of_sunlight, sunlight_intensity, peak_sunlight_intensity)
     df = pd.DataFrame([[hours_of_sunlight, sunlight_intensity, peak_sunlight_intensity]],
                       columns=['Hours_Light', 'Intensity_Light', 'Peak_Light'])
     return my_model.predict(df)[0]
-# Function to output the result of the whatif questions 1-3
 
 # Training the model
 # first Load your dataset
@@ -87,10 +97,3 @@ plt.title('Bar Chart of all 3 WHAT-IFs Predictions')
 
 # Show the plot
 plt.show()
-
-
-
-
-
-
-
