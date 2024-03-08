@@ -19,9 +19,13 @@ ser.baudrate = 115200
 #what is the bloody port number, find it on windows machine by checking device manager
 ser.port = "COM3"
 ser.open()
-for x in range(4):
+for x in range(10):
         # First take in all the data and assign it to this variable
         microbitdata = str(ser.readline())
+        print("here",microbitdata)
+        light_data = microbitdata[2:]
+
+        """
         # Get second bit onwards, call that signal_in
         light_data = microbitdata[2:]
 
@@ -34,27 +38,28 @@ for x in range(4):
         # Replace this with nothing (remove it), data validation!
         light_data = light_data.replace("\\r\\n","")
         #remove alphas
+        """
         light_data = remove_alpha(light_data)
         print("removed alphas", light_data)
         
         #Validation checking to ensure the data is integer and changing to float
-        #light_data = float(light_data)
+        light_data = float(light_data)
         
         # Print it to see if any of that rubbish above actually worked
         #print(type(light_data))
         #VALIDATION
         #add data to list! But only if its a float, so null types which are common on Microbits will never get added to the data
-        if type(light_data) == float:
-            lightList.append(light_data)
+        #if type(light_data) == float:
+        lightList.append(light_data)
 
 print("LightDataaaa =  ", lightList)
 #The three parameters for project
-maxLight = round(max(lightList),2)
-minLight = round(min(lightList),2)
-meanLight = round(mean(lightList),2)
-print("Max Light List is ",maxLight,"Min Light List is ",minLight,"Mean Light List is ",meanLight)
+#maxLight = round(max(lightList),2)
+#minLight = round(min(lightList),2)
+#meanLight = round(mean(lightList),2)
+#print("Max Light List is ",maxLight,"Min Light List is ",minLight,"Mean Light List is ",meanLight)
 
-
+"""
 
 #write the combined avg light data and average mood to a CSV file
 f = open("BR1-3_results-serial.csv", "a", newline='')
@@ -78,3 +83,4 @@ print(df)
 #AR1-3 programs
 #It is also necessary to open the data and add the column labels before running into
 #AR1-3 progs
+"""
