@@ -65,14 +65,14 @@ if not isinstance(light_max, float):
 if not isinstance(light_mean, float):
     light_mean = float(light_mean)
 
-f = open("BR1-3_results.csv", "a", newline='')
+f = open("BR1-3_results-105616.csv", "a", newline='')
 csver = csv.writer(f)
 
 csver.writerow([light_min, light_max, light_mean, avg_mood])
 f.close()
 
 # Preview what is now in the spreadsheet using pandas
-df2 = pd.read_csv('BR1-3_results.csv')
+df2 = pd.read_csv('BR1-3_results-105616.csv')
 print(df2)
 
 # names of the variables and their values for the chart
